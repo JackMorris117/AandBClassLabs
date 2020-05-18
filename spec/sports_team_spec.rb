@@ -19,23 +19,25 @@ class TestTeam < MiniTest::Test
         team = Team.new("Avengers", @@array, "Cap", 0)
         assert_equal("Cap", team.coach())
     end
+
     def test_set_name
 
         team = Team.new("Avengers", @@array, "Cap", 0)
         team.set_coach("Iron Man")
         assert_equal("Iron Man", team.coach())
     end
-    def test_add_to_array
 
+    def test_add_to_array
         team = Team.new("Avengers", @@array, "Cap", 0)
         assert_equal(@@array.push("Spider-Man"), team.add_to_array("Spider-Man"))
     end
+
     def test_check_if_in_array
         team = Team.new("Avengers", @@array, "Cap", 0)
         team.check_if_in_array("Hawkeye")
         assert_equal(false, team.check_if_in_array("Thanos"))
-        
     end
+    
     def test_win_points_up
         team = Team.new("Avengers", @@array, "Cap", 0)
         team.win_points_up(0)
