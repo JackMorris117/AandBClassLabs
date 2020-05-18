@@ -3,7 +3,7 @@ class Student
     def initialize(name, cohort)
         @name = name
         @cohort = cohort
-
+        
     end
     def name
         return @name
@@ -17,12 +17,14 @@ class Student
     def set_cohort(cohort)
         @cohort = cohort
     end
-    # def talk
-    #     if @name == "name"
-    #         return "I can talk!"
-    #     end
+    def talk
+       return "I can talk!"     
 
-    # end
+    end
+    def say_favourite_language(language)
+        return  "I love #{language}!"
+
+    end
    
 
 
